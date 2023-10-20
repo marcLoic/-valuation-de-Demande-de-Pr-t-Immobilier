@@ -12,5 +12,11 @@ text = "Nom du Client: John Doe\nAdresse: 123 Rue de la Liberté, 75001 Paris, F
 # Appel de la méthode extrat_data
 result = client.service.extract_data(text=text)
 
+url_1 = 'http://localhost:8001/SolvencyVerificationService?wsdl'
+
+client_1 = Client(url_1)
+
+solvency_result = client.service.verify_solvency(result)
+
 # Affichage du résultat
-print(result)
+print(solvency_result)

@@ -8,22 +8,23 @@ class SolvencyVerificationService(ServiceBase):
     @rpc(Unicode, _returns=Unicode)
     def verify_solvency(ctx, extracted_info):
         
-        response = "Solvabilité vérifiée avec succès."
-        return response
-    
-    @rpc(Unicode, _returns=Unicode)
-    def bureau_credit(ctx, user):
+        extracted_info = extracted_info
 
-        response = ""
-        return response
+        result_bureau_credit = SolvencyVerificationService.bureau_credit(extracted_info.name)
+        if (result_bureau_credit):
+            return result_bureau_credit
+        else:
+            response = "Pas solvable"
+            return response
     
-    @rpc(Unicode, _returns=Unicode)
+    def bureau_credit(ctx, user):
+        return True
+    
     def algorithme_scoring(ctx, user):
 
         response = ""
         return response
     
-    @rpc(Unicode, _returns=Unicode)
     def analyse_revenus_depenses(ctx, user):
 
         response = ""
