@@ -47,7 +47,7 @@ Pour installer les dépendances nécessaires au projet, suivez les étapes ci-de
 Étape 1: Cloner le Répertoire (Optionnel)
 Si le projet est hébergé sur un dépôt Git, commencez par le cloner :
 
-git clone https://your-repository-url.git
+git clone  git@github.com:marcLoic/-valuation-de-Demande-de-Pr-t-Immobilier.git
 cd your-project-name
 
 
